@@ -38,6 +38,6 @@ input_df = user_input()
 if st.button('Predict Credit Risk'):
     prediction = model.predict(input_df)
     if prediction[0] == 1:
-        st.success('✅ Good Credit Risk')
+        st.success('❌High Credit Risk, Bad customer')
     else:
-        st.error('❌ Bad Credit Risk')
+        st.error('✅ Low Credit Risk, Good customer')
